@@ -1,8 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Sora, Source_Code_Pro, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import ButtonGradient from "../assets/svg/ButtonGradient";
 
-const inter = Inter({ subsets: ["latin"] });
+const sora = Sora({ subsets: ["latin"] });
+const sourceCodePro = Source_Code_Pro({
+  subsets: ["latin"],
+  variable: "--font-code",
+});
+const grotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-grotesk",
+});
 
 export const metadata: Metadata = {
   title: "Brainwave",
@@ -16,7 +25,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} dark`}>{children}</body>
+      <body
+        className={`${sora.className} ${sourceCodePro.variable} ${grotesk.variable} dark`}
+      >
+        {children}
+
+        <ButtonGradient />
+      </body>
     </html>
   );
 }

@@ -18,6 +18,20 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        "radial-gradient": "radial-gradient(var(--tw-gradient-stops))",
+        "conic-gradient":
+          "conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876)",
+      },
+      spacing: {
+        0.25: "0.0625rem",
+        7.5: "1.875rem",
+        15: "3.75rem",
+      },
+      fontFamily: {
+        code: ["var(--font-code)"],
+        grotesk: ["var(--font-grotesk)"],
+      },
       colors: {
         color: {
           1: "#AC6AFF",

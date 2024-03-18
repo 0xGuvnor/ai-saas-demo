@@ -1,12 +1,13 @@
-import { Button } from "@/components/ui/button";
-import ButtonGradient from "../../public/svg/ButtonGradient";
-import ButtonSvg from "../../public/svg/ButtonSvg";
+import Benefits from "@/components/benefits";
+import Header from "@/components/header";
+import Hero from "@/components/hero";
 
 export default function Home() {
   return (
-    <main>
-      <Button variant={"default"}>something</Button>
-      <ButtonGradient />
+    <main className="pt-[4.75rem] lg:pt-[5.25rem]">
+      <Header />
+      <Hero />
+      <Benefits />
     </main>
   );
 }
