@@ -32,17 +32,17 @@ function Section({
     >
       {children}
 
-      <div className="pointer-events-none absolute left-5 top-0 hidden h-full w-0.25 bg-stroke-1 md:block lg:left-7.5 xl:left-10"></div>
-      <div className="pointer-events-none absolute right-5 top-0 hidden h-full w-0.25 bg-stroke-1 md:block lg:right-7.5 xl:right-10"></div>
+      <div className="pointer-events-none absolute left-5 top-0 hidden h-full w-0.25 bg-stroke-1 md:block lg:left-7.5 xl:left-10" />
+      <div className="pointer-events-none absolute right-5 top-0 hidden h-full w-0.25 bg-stroke-1 md:block lg:right-7.5 xl:right-10" />
 
       {crosses && (
         <>
           <div
             className={cn(
               "pointer-events-none absolute left-7.5 right-7.5 top-0 hidden h-0.25 bg-stroke-1",
-              crossesOffset && crossesOffset,
               "lg:block",
-              "xl:left-10",
+              "xl:left-10 xl:right-10",
+              crossesOffset && crossesOffset,
             )}
           ></div>
           <SectionSvg crossesOffset={crossesOffset} />
